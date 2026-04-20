@@ -1,0 +1,18 @@
+YOUR FULL NAME
+
+EDUCATION
+University Name, City - Degree
+University Name, City - Degree
+
+WORK
+Company Name - Job Title (Start Year-End Year)
+  - Project/Client: Description of what you did, impact, scale, technologies used.
+  - Project/Client: Description of what you did, impact, scale, technologies used.
+
+Company Name - Job Title (Start Year-End Year)
+- Description of what you did and impact.
+
+PROJECTS
+Project Name (link) - One-line description of the project.
+
+SKILLS: Skill 1, Skill 2, Skill 3

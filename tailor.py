@@ -7,29 +7,10 @@ import sys
 from docx.shared import Inches, Pt
 from docx.oxml.ns import qn
 
-RESUME = """KATHERINE PAIGE BLACK
-
-EDUCATION
-Georgetown University, Washington D.C. - MS Economics
-The George Washington University, Washington D.C. - BA Economics
-
-WORK
-End to End Analytics @ Accenture - Industrial and Functional AI Decision Scientist (Aug 2021-Present)
-  - Albertsons: Served as onshore lead Data Scientist for meat department markdown optimization across ~200 Intermountain West stores (hundreds of SKUs); engineered end-to-end ML pipeline integrating 4 data sources (POS transactions, forward-looking coupons, historical sales/seasonality, DC shipments) to replace a fully manual markdown process, leading a 6-person cross-functional team across two time zones.
-  - Gilead Pharma: Replaced a non-functional legacy Alteryx process (requiring manual file downloads, unused by the team) with a fully automated Python/Databricks pipeline on AWS pulling dynamic cloud data; built production dashboard adopted across multiple teams measuring line loads against campaign output; introduced supplier confidence heuristic enabling data-driven contract manufacturer negotiations; delivered full handover training to client counterpart.
-  - Burlington: Developed inventory optimization models using clustering and time series techniques across ~100 stores; pilot results showed 30% sales lift in select merchandise tranches vs. non-pilot stores, informing stocking decisions to streamline a bloated product offering.
-  - Google BIBA: Designed supply chain forecasting dashboards for Google's full data center fleet with 30+ power users; built modular dashboard architecture that scaled with new AI infrastructure rollouts, tracking downtime and quality metrics across the entire population.
-
-US Patent and Trademark Office - Statistical Programmer (2019-2021)
-- Statistical analysis, visualizations, published report to Congress
-
-World Bank - Consultant (Jan-May 2019)
-- RCT on labor inequality in MENA
-
-Campbell Hill Aviation Group - Research Analyst (2016-2018)
-- Business cases for airports and airlines
-
-SKILLS: Python, SQL, S&OP, machine learning, Anaplan L1MB and L2MB"""
+# Resume is loaded from resume.txt (gitignored — copy resume_example.txt to resume.txt and fill in your details)
+_resume_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "resume.txt")
+with open(_resume_path, "r") as _f:
+    RESUME = _f.read().strip()
 
 SYSTEM_PROMPT = """You are an expert resume writer and career coach. Your job is to tailor a resume to a specific job description.
 
